@@ -3,3 +3,7 @@
 .DS_Store
 answers
 .hg
+
+/python 2/.settings
+/python 2/.project
+/python 2/.pydevproject

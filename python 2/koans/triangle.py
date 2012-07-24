@@ -18,8 +18,24 @@
 #   about_triangle_project_2.py
 #
 def triangle(a, b, c):
-    # DELETE 'PASS' AND WRITE THIS CODE
-    pass
+#    sides_set = sorted(set([a,b,c]))
+#    len_sides_set = len(sides_set)
+    
+    sides = sorted([a,b,c])
+    
+    if sides[0] <= 0:
+        raise TriangleError('Sides can not be less than or equal to 0 (zero)')
+    elif sides[0] + sides [1] <= sides[2]:
+        raise TriangleError('Invalid sides')
+    
+    len_sides = len(set(sides))
+    if len_sides == 1:
+        return 'equilateral'
+    elif len_sides == 2:
+        return 'isosceles'
+    else:
+        return 'scalene'
+    
 
 
 # Error class used in part 2.  No need to change this code.
